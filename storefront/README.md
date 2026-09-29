@@ -4,7 +4,7 @@ Existing Lovable storefront ported to standard TanStack Start + Supabase + Verce
 
 ## Status
 
-Source port builds and passes TypeScript. This is migration preparation, not a completed database cutover. Do not deploy against the Manager database until the shared catalog and customer-order adapter migration is implemented. Never apply legacy-schema/migrations to the Manager database: its products/orders schemas conflict.
+Source port builds and passes TypeScript. Shared catalog and customer-order RPCs use the Manager database. Manager products remain the inventory authority. Publishing copies approved marketing fields into a public snapshot; checkout validates price and decrements the same stock atomically. Unknown stock, cost, or incomplete products cannot be sold. Never apply legacy-schema/migrations to the Manager database: its products/orders schemas conflict.
 
 Live marketing catalog is preserved in migration-data/catalog.json. Private inventory/costs/customer data are excluded from Git. Images are preserved under public/migrated-assets, with source URL mapping in asset-map.json.
 

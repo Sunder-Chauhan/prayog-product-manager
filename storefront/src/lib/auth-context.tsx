@@ -41,11 +41,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setRoles([]);
       return;
     }
-    supabase
-      .from("user_roles")
-      .select("role")
-      .eq("user_id", session.user.id)
-      .then(({ data }) => setRoles((data ?? []).map((r) => r.role as AppRole)));
+    setRoles(["customer"]);
+    (supabase.from as any)("profiles").upsert({ id: session.user.id, full_name: session.user.user_metadata?.full_name || "" }, { onConflict: "id", ignoreDuplicates: true });
   }, [session?.user?.id]);
 
   const value: AuthState = {

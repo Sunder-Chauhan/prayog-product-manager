@@ -189,6 +189,7 @@ function ProductDetail() {
               </button>
             </div>
             <button
+              disabled={!((product as any).stock_on_hand > 0)}
               onClick={() => {
                 add(
                   {
@@ -205,7 +206,7 @@ function ProductDetail() {
               }}
               className="flex-1 rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-widest text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
             >
-              Add to cart
+              {(product as any).stock_on_hand > 0 ? "Add to cart" : "Availability pending"}
             </button>
             <button
               onClick={toggleWishlist}

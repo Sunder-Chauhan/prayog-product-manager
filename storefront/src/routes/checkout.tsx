@@ -2,7 +2,7 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { hydrateCart, useCart } from "@/lib/cart-store";
 import { buildOrderMessage, whatsappUrl } from "@/lib/whatsapp";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase, sharedRpc } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth-context";
 import { toast } from "sonner";
 
@@ -77,46 +77,22 @@ function CheckoutPage() {
       items: items.map((i) => ({ sku: i.sku, name: i.name, quantity: i.quantity })),
     });
 
-    // Persist order (if signed in)
-    if (user) {
-      const subtotal = items.reduce((n, i) => n + (i.price ?? 0) * i.quantity, 0);
-      const { data: order, error } = await supabase
-        .from("orders")
-        .insert({
-          user_id: user.id,
-          status: "whatsapp_sent",
-          is_bulk: false,
-          customer_name: form.name,
-          customer_email: form.email,
-          customer_phone: form.phone,
-          shipping_address: {
-            line1: form.line1, line2: form.line2, city: form.city,
-            state: form.state, pincode: form.pincode, country: form.country,
-            notes: form.notes,
-          },
-          delivery_notes: form.notes || null,
-          items_count: items.reduce((n, i) => n + i.quantity, 0),
-          subtotal: subtotal || null,
-          whatsapp_sent_at: new Date().toISOString(),
-        })
-        .select()
-        .single();
-      if (error) {
-        toast.error("Couldn't save order — continuing to WhatsApp anyway.");
-      } else if (order) {
-        await supabase.from("order_items").insert(
-          items.map((i) => ({
-            order_id: order.id,
-            product_id: i.productId,
-            product_name: i.name,
-            sku: i.sku ?? null,
-            quantity: i.quantity,
-            unit_price: i.price ?? null,
-            line_total: (i.price ?? 0) * i.quantity || null,
-          })),
-        );
-      }
+    if (!user) {
+      toast.error("Sign in to place your order.");
+      setSubmitting(false);
+      navigate({ to: "/auth", search: { next: "/checkout" } });
+      return;
     }
+    const requestId = sessionStorage.getItem("prayog-checkout-request") || crypto.randomUUID();
+    sessionStorage.setItem("prayog-checkout-request",requestId);
+    const { error } = await sharedRpc("place_storefront_order", {
+      p_items: items.map(i => ({ productId: i.productId, quantity: i.quantity })),
+      p_customer: { name: form.name, phone: form.phone, email: form.email },
+      p_address: { line1: form.line1, line2: form.line2, city: form.city, state: form.state, pincode: form.pincode, country: form.country, notes: form.notes },
+      p_request_id: requestId,
+    });
+    if (error) { toast.error(error.message); setSubmitting(false); return; }
+    sessionStorage.removeItem("prayog-checkout-request");
 
     // Open WhatsApp
     window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");

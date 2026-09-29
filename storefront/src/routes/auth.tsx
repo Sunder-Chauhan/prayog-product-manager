@@ -88,13 +88,13 @@ function AuthPage() {
           : "One account for orders, wishlists and trade requests."}
       </p>
 
-      <button
+      {import.meta.env.VITE_GOOGLE_AUTH_ENABLED === "true" && <button
         onClick={handleGoogle}
         disabled={loading}
         className="mt-8 w-full rounded-full border border-border px-6 py-3.5 text-sm hover:bg-secondary transition-colors disabled:opacity-50"
       >
         Continue with Google
-      </button>
+      </button>}
 
       <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
         <div className="h-px flex-1 bg-border" /> or <div className="h-px flex-1 bg-border" />

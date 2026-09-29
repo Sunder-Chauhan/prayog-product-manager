@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase, getCatalog } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth-context";
 
 export const Route = createFileRoute("/_authenticated/account/wishlist")({
@@ -15,10 +15,11 @@ function WishlistPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("wishlist")
-        .select("id, products(id, slug, name, tagline, hero_image_url, base_price)")
+        .select("id, product_id")
         .eq("user_id", user!.id);
       if (error) throw error;
-      return data ?? [];
+      const catalog = await getCatalog();
+      return (data ?? []).map((w: any) => ({ ...w, products: catalog.products.find((p: any) => p.id === w.product_id) })).filter((w: any) => w.products);
     },
   });
 

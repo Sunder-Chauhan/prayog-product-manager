@@ -46,6 +46,7 @@ function TradePage() {
       message: f.message,
     });
 
+    if (!user) { setSubmitting(false); toast.error("Please sign in before requesting a quotation."); navigate({ to: "/auth", search: { next: "/trade" } }); return; }
     const { error } = await supabase.from("quotations").insert({
       user_id: user?.id ?? null,
       contact_name: f.name,
@@ -58,7 +59,7 @@ function TradePage() {
       timeline: f.timeline || null,
       message: f.message,
     });
-    if (error) toast.error(error.message);
+    if (error) { setSubmitting(false); toast.error(error.message); return; }
     else toast.success("Quote request sent — opening WhatsApp for a faster reply.");
     window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
     setSubmitting(false);

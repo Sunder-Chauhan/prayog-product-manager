@@ -27,15 +27,7 @@ import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
 import { Route as AuthenticatedOpsRouteImport } from './routes/_authenticated/ops'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
-import { Route as AuthenticatedOpsIndexRouteImport } from './routes/_authenticated/ops.index'
 import { Route as AuthenticatedAccountIndexRouteImport } from './routes/_authenticated/account.index'
-import { Route as AuthenticatedOpsQuotationsRouteImport } from './routes/_authenticated/ops.quotations'
-import { Route as AuthenticatedOpsProductsRouteImport } from './routes/_authenticated/ops.products'
-import { Route as AuthenticatedOpsOrdersRouteImport } from './routes/_authenticated/ops.orders'
-import { Route as AuthenticatedOpsLiveRouteImport } from './routes/_authenticated/ops.live'
-import { Route as AuthenticatedOpsInventoryRouteImport } from './routes/_authenticated/ops.inventory'
-import { Route as AuthenticatedOpsCustomersRouteImport } from './routes/_authenticated/ops.customers'
-import { Route as AuthenticatedOpsAccountsRouteImport } from './routes/_authenticated/ops.accounts'
 import { Route as AuthenticatedAccountWishlistRouteImport } from './routes/_authenticated/account.wishlist'
 import { Route as AuthenticatedAccountOrdersRouteImport } from './routes/_authenticated/account.orders'
 import { Route as AuthenticatedAccountBusinessRouteImport } from './routes/_authenticated/account.business'
@@ -130,56 +122,11 @@ const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
   path: '/account',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const AuthenticatedOpsIndexRoute = AuthenticatedOpsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AuthenticatedOpsRoute,
-} as any)
 const AuthenticatedAccountIndexRoute =
   AuthenticatedAccountIndexRouteImport.update({
     id: '/',
     path: '/',
     getParentRoute: () => AuthenticatedAccountRoute,
-  } as any)
-const AuthenticatedOpsQuotationsRoute =
-  AuthenticatedOpsQuotationsRouteImport.update({
-    id: '/quotations',
-    path: '/quotations',
-    getParentRoute: () => AuthenticatedOpsRoute,
-  } as any)
-const AuthenticatedOpsProductsRoute =
-  AuthenticatedOpsProductsRouteImport.update({
-    id: '/products',
-    path: '/products',
-    getParentRoute: () => AuthenticatedOpsRoute,
-  } as any)
-const AuthenticatedOpsOrdersRoute = AuthenticatedOpsOrdersRouteImport.update({
-  id: '/orders',
-  path: '/orders',
-  getParentRoute: () => AuthenticatedOpsRoute,
-} as any)
-const AuthenticatedOpsLiveRoute = AuthenticatedOpsLiveRouteImport.update({
-  id: '/live',
-  path: '/live',
-  getParentRoute: () => AuthenticatedOpsRoute,
-} as any)
-const AuthenticatedOpsInventoryRoute =
-  AuthenticatedOpsInventoryRouteImport.update({
-    id: '/inventory',
-    path: '/inventory',
-    getParentRoute: () => AuthenticatedOpsRoute,
-  } as any)
-const AuthenticatedOpsCustomersRoute =
-  AuthenticatedOpsCustomersRouteImport.update({
-    id: '/customers',
-    path: '/customers',
-    getParentRoute: () => AuthenticatedOpsRoute,
-  } as any)
-const AuthenticatedOpsAccountsRoute =
-  AuthenticatedOpsAccountsRouteImport.update({
-    id: '/accounts',
-    path: '/accounts',
-    getParentRoute: () => AuthenticatedOpsRoute,
   } as any)
 const AuthenticatedAccountWishlistRoute =
   AuthenticatedAccountWishlistRouteImport.update({
@@ -220,7 +167,7 @@ export interface FileRoutesByFullPath {
   '/trade': typeof TradeRoute
   '/wishlist': typeof WishlistRoute
   '/account': typeof AuthenticatedAccountRouteWithChildren
-  '/ops': typeof AuthenticatedOpsRouteWithChildren
+  '/ops': typeof AuthenticatedOpsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/': typeof ProductsIndexRoute
@@ -228,15 +175,7 @@ export interface FileRoutesByFullPath {
   '/account/business': typeof AuthenticatedAccountBusinessRoute
   '/account/orders': typeof AuthenticatedAccountOrdersRoute
   '/account/wishlist': typeof AuthenticatedAccountWishlistRoute
-  '/ops/accounts': typeof AuthenticatedOpsAccountsRoute
-  '/ops/customers': typeof AuthenticatedOpsCustomersRoute
-  '/ops/inventory': typeof AuthenticatedOpsInventoryRoute
-  '/ops/live': typeof AuthenticatedOpsLiveRoute
-  '/ops/orders': typeof AuthenticatedOpsOrdersRoute
-  '/ops/products': typeof AuthenticatedOpsProductsRoute
-  '/ops/quotations': typeof AuthenticatedOpsQuotationsRoute
   '/account/': typeof AuthenticatedAccountIndexRoute
-  '/ops/': typeof AuthenticatedOpsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -251,6 +190,7 @@ export interface FileRoutesByTo {
   '/story': typeof StoryRoute
   '/trade': typeof TradeRoute
   '/wishlist': typeof WishlistRoute
+  '/ops': typeof AuthenticatedOpsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products': typeof ProductsIndexRoute
@@ -258,15 +198,7 @@ export interface FileRoutesByTo {
   '/account/business': typeof AuthenticatedAccountBusinessRoute
   '/account/orders': typeof AuthenticatedAccountOrdersRoute
   '/account/wishlist': typeof AuthenticatedAccountWishlistRoute
-  '/ops/accounts': typeof AuthenticatedOpsAccountsRoute
-  '/ops/customers': typeof AuthenticatedOpsCustomersRoute
-  '/ops/inventory': typeof AuthenticatedOpsInventoryRoute
-  '/ops/live': typeof AuthenticatedOpsLiveRoute
-  '/ops/orders': typeof AuthenticatedOpsOrdersRoute
-  '/ops/products': typeof AuthenticatedOpsProductsRoute
-  '/ops/quotations': typeof AuthenticatedOpsQuotationsRoute
   '/account': typeof AuthenticatedAccountIndexRoute
-  '/ops': typeof AuthenticatedOpsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -284,7 +216,7 @@ export interface FileRoutesById {
   '/trade': typeof TradeRoute
   '/wishlist': typeof WishlistRoute
   '/_authenticated/account': typeof AuthenticatedAccountRouteWithChildren
-  '/_authenticated/ops': typeof AuthenticatedOpsRouteWithChildren
+  '/_authenticated/ops': typeof AuthenticatedOpsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/': typeof ProductsIndexRoute
@@ -292,15 +224,7 @@ export interface FileRoutesById {
   '/_authenticated/account/business': typeof AuthenticatedAccountBusinessRoute
   '/_authenticated/account/orders': typeof AuthenticatedAccountOrdersRoute
   '/_authenticated/account/wishlist': typeof AuthenticatedAccountWishlistRoute
-  '/_authenticated/ops/accounts': typeof AuthenticatedOpsAccountsRoute
-  '/_authenticated/ops/customers': typeof AuthenticatedOpsCustomersRoute
-  '/_authenticated/ops/inventory': typeof AuthenticatedOpsInventoryRoute
-  '/_authenticated/ops/live': typeof AuthenticatedOpsLiveRoute
-  '/_authenticated/ops/orders': typeof AuthenticatedOpsOrdersRoute
-  '/_authenticated/ops/products': typeof AuthenticatedOpsProductsRoute
-  '/_authenticated/ops/quotations': typeof AuthenticatedOpsQuotationsRoute
   '/_authenticated/account/': typeof AuthenticatedAccountIndexRoute
-  '/_authenticated/ops/': typeof AuthenticatedOpsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -326,15 +250,7 @@ export interface FileRouteTypes {
     | '/account/business'
     | '/account/orders'
     | '/account/wishlist'
-    | '/ops/accounts'
-    | '/ops/customers'
-    | '/ops/inventory'
-    | '/ops/live'
-    | '/ops/orders'
-    | '/ops/products'
-    | '/ops/quotations'
     | '/account/'
-    | '/ops/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -349,6 +265,7 @@ export interface FileRouteTypes {
     | '/story'
     | '/trade'
     | '/wishlist'
+    | '/ops'
     | '/collections/$slug'
     | '/products/$slug'
     | '/products'
@@ -356,15 +273,7 @@ export interface FileRouteTypes {
     | '/account/business'
     | '/account/orders'
     | '/account/wishlist'
-    | '/ops/accounts'
-    | '/ops/customers'
-    | '/ops/inventory'
-    | '/ops/live'
-    | '/ops/orders'
-    | '/ops/products'
-    | '/ops/quotations'
     | '/account'
-    | '/ops'
   id:
     | '__root__'
     | '/'
@@ -389,15 +298,7 @@ export interface FileRouteTypes {
     | '/_authenticated/account/business'
     | '/_authenticated/account/orders'
     | '/_authenticated/account/wishlist'
-    | '/_authenticated/ops/accounts'
-    | '/_authenticated/ops/customers'
-    | '/_authenticated/ops/inventory'
-    | '/_authenticated/ops/live'
-    | '/_authenticated/ops/orders'
-    | '/_authenticated/ops/products'
-    | '/_authenticated/ops/quotations'
     | '/_authenticated/account/'
-    | '/_authenticated/ops/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -546,68 +447,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAccountRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/_authenticated/ops/': {
-      id: '/_authenticated/ops/'
-      path: '/'
-      fullPath: '/ops/'
-      preLoaderRoute: typeof AuthenticatedOpsIndexRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
     '/_authenticated/account/': {
       id: '/_authenticated/account/'
       path: '/'
       fullPath: '/account/'
       preLoaderRoute: typeof AuthenticatedAccountIndexRouteImport
       parentRoute: typeof AuthenticatedAccountRoute
-    }
-    '/_authenticated/ops/quotations': {
-      id: '/_authenticated/ops/quotations'
-      path: '/quotations'
-      fullPath: '/ops/quotations'
-      preLoaderRoute: typeof AuthenticatedOpsQuotationsRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/products': {
-      id: '/_authenticated/ops/products'
-      path: '/products'
-      fullPath: '/ops/products'
-      preLoaderRoute: typeof AuthenticatedOpsProductsRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/orders': {
-      id: '/_authenticated/ops/orders'
-      path: '/orders'
-      fullPath: '/ops/orders'
-      preLoaderRoute: typeof AuthenticatedOpsOrdersRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/live': {
-      id: '/_authenticated/ops/live'
-      path: '/live'
-      fullPath: '/ops/live'
-      preLoaderRoute: typeof AuthenticatedOpsLiveRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/inventory': {
-      id: '/_authenticated/ops/inventory'
-      path: '/inventory'
-      fullPath: '/ops/inventory'
-      preLoaderRoute: typeof AuthenticatedOpsInventoryRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/customers': {
-      id: '/_authenticated/ops/customers'
-      path: '/customers'
-      fullPath: '/ops/customers'
-      preLoaderRoute: typeof AuthenticatedOpsCustomersRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
-    }
-    '/_authenticated/ops/accounts': {
-      id: '/_authenticated/ops/accounts'
-      path: '/accounts'
-      fullPath: '/ops/accounts'
-      preLoaderRoute: typeof AuthenticatedOpsAccountsRouteImport
-      parentRoute: typeof AuthenticatedOpsRoute
     }
     '/_authenticated/account/wishlist': {
       id: '/_authenticated/account/wishlist'
@@ -659,39 +504,14 @@ const AuthenticatedAccountRouteChildren: AuthenticatedAccountRouteChildren = {
 const AuthenticatedAccountRouteWithChildren =
   AuthenticatedAccountRoute._addFileChildren(AuthenticatedAccountRouteChildren)
 
-interface AuthenticatedOpsRouteChildren {
-  AuthenticatedOpsAccountsRoute: typeof AuthenticatedOpsAccountsRoute
-  AuthenticatedOpsCustomersRoute: typeof AuthenticatedOpsCustomersRoute
-  AuthenticatedOpsInventoryRoute: typeof AuthenticatedOpsInventoryRoute
-  AuthenticatedOpsLiveRoute: typeof AuthenticatedOpsLiveRoute
-  AuthenticatedOpsOrdersRoute: typeof AuthenticatedOpsOrdersRoute
-  AuthenticatedOpsProductsRoute: typeof AuthenticatedOpsProductsRoute
-  AuthenticatedOpsQuotationsRoute: typeof AuthenticatedOpsQuotationsRoute
-  AuthenticatedOpsIndexRoute: typeof AuthenticatedOpsIndexRoute
-}
-
-const AuthenticatedOpsRouteChildren: AuthenticatedOpsRouteChildren = {
-  AuthenticatedOpsAccountsRoute: AuthenticatedOpsAccountsRoute,
-  AuthenticatedOpsCustomersRoute: AuthenticatedOpsCustomersRoute,
-  AuthenticatedOpsInventoryRoute: AuthenticatedOpsInventoryRoute,
-  AuthenticatedOpsLiveRoute: AuthenticatedOpsLiveRoute,
-  AuthenticatedOpsOrdersRoute: AuthenticatedOpsOrdersRoute,
-  AuthenticatedOpsProductsRoute: AuthenticatedOpsProductsRoute,
-  AuthenticatedOpsQuotationsRoute: AuthenticatedOpsQuotationsRoute,
-  AuthenticatedOpsIndexRoute: AuthenticatedOpsIndexRoute,
-}
-
-const AuthenticatedOpsRouteWithChildren =
-  AuthenticatedOpsRoute._addFileChildren(AuthenticatedOpsRouteChildren)
-
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAccountRoute: typeof AuthenticatedAccountRouteWithChildren
-  AuthenticatedOpsRoute: typeof AuthenticatedOpsRouteWithChildren
+  AuthenticatedOpsRoute: typeof AuthenticatedOpsRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAccountRoute: AuthenticatedAccountRouteWithChildren,
-  AuthenticatedOpsRoute: AuthenticatedOpsRouteWithChildren,
+  AuthenticatedOpsRoute: AuthenticatedOpsRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =

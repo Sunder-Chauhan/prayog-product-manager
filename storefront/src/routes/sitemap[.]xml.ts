@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
-const BASE_URL = "";
+const BASE_URL = import.meta.env.VITE_STOREFRONT_URL || "https://prayog-storefront.vercel.app";
 
 interface SitemapEntry {
   path: string;
