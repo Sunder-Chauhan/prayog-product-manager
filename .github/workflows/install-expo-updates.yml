@@ -1,0 +1,34 @@
+name: Install Expo updates dependency
+
+on:
+  push:
+    paths:
+      - '.github/workflows/install-expo-updates.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - name: Install and lock Expo updates
+        working-directory: mobile
+        run: |
+          npm ci
+          npx expo install expo-updates --npm
+          npm run lint
+      - name: Commit dependency files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mobile/package.json mobile/package-lock.json
+          git commit -m "Install Expo updates for over-the-air releases"
+          git push
