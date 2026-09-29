@@ -1,0 +1,13 @@
+name: Build Prayog Android APK
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build_android:
+    name: Build internal Android app
+    type: build
+    params:
+      platform: android
+      profile: preview

@@ -29,6 +29,10 @@ From `mobile/`, sign in to an Expo account with `npx eas-cli@latest login`, then
 
 Before giving separate employees or managers accounts, implement team membership and role policies in Supabase. Current row policies restrict every account to its own records, so a newly registered employee will see an empty workspace. Do not share the owner password. The 34 imported products are draft records; complete their names, prices and opening stock before taking orders.
 
+### Build Android automatically from GitHub
+
+The Expo project can use `mobile/.eas/workflows/build-android.yml` to make a new internal APK whenever `main` is pushed. In Expo project GitHub settings, connect this repository and set **Base directory** to `mobile`. Store `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in the Expo **preview** environment. New builds appear under Expo Builds; install the new APK on staff devices for native changes such as the app icon. A Git push creates a build but does not automatically replace an APK already installed on a phone. JavaScript-only over-the-air updates require a separate EAS Update setup and a compatible app build.
+
 ## Vercel
 
 Import this project as a Vite app, set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` for production, build with `npm run build`, and use `dist` as the output directory. Do not expose a Supabase secret key in Vite variables.
