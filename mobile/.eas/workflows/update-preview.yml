@@ -1,0 +1,16 @@
+name: Update Prayog Android preview
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'mobile/**'
+
+jobs:
+  update_android:
+    name: Publish app update
+    type: update
+    environment: preview
+    params:
+      platform: android
+      channel: preview

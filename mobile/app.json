@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "sunderexpoapps-team",
     "name": "Prayog Decor Manager",
     "slug": "prayog-decor-manager",
     "version": "1.0.0",
@@ -28,11 +29,17 @@
       "expo-router",
       "expo-image-picker"
     ],
-    "owner": "sunderexpoapps-team",
     "extra": {
       "eas": {
         "projectId": "af7b0176-cb2a-4e7f-b12a-00f7e909b01b"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/af7b0176-cb2a-4e7f-b12a-00f7e909b01b",
+      "checkAutomatically": "ON_LOAD"
     }
   }
 }
