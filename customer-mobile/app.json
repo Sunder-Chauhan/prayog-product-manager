@@ -14,6 +14,18 @@
     "ios": {
       "bundleIdentifier": "com.prayogdecor.shop",
       "supportsTablet": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "32fd23d5-c23a-483f-9dcc-62fa8a3b8830"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/32fd23d5-c23a-483f-9dcc-62fa8a3b8830",
+      "checkAutomatically": "ON_LOAD"
     }
   }
 }
