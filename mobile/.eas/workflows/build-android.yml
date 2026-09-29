@@ -10,7 +10,7 @@ on:
       - 'mobile/package-lock.json'
       - 'mobile/assets/**'
       - 'mobile/.eas/workflows/build-android.yml'
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   build_android:
