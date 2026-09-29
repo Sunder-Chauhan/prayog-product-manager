@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "owner": "sunderexpoapps-team",
+    "name": "Prayog Decor",
+    "slug": "prayog-decor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "prayogshop",
+    "android": {
+      "package": "com.prayogdecor.shop"
+    },
+    "ios": {
+      "bundleIdentifier": "com.prayogdecor.shop",
+      "supportsTablet": true
+    }
+  }
+}

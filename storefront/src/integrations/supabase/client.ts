@@ -1,10 +1,8 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 const raw = createClient<Database>(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
-export const shared = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY, { auth: { persistSession: false, autoRefreshToken: false } });
-// Use the authenticated client for shared RPCs; the second client is never a privileged client.
 export async function sharedRpc(name: string, args?: Record<string, unknown>) {
-  return (raw.rpc as unknown as typeof shared.rpc)(name, args);
+  return (raw as unknown as SupabaseClient).rpc(name, args);
 }
 export async function getCatalog() {
   const { data, error } = await sharedRpc('storefront_catalog');
