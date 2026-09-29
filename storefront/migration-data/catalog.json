@@ -1,0 +1,615 @@
+{
+  "products": [
+    {
+      "base_price": 4800,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "currency": "INR",
+      "cutout_image_url": null,
+      "description": "A tall, elegantly tapered vase finished in bone-white matte porcelain. Designed for a single stem or a considered dried arrangement.",
+      "gallery": [
+        "/images/product-aurora-vase.jpg",
+        "/images/collection-vessels.jpg",
+        "/images/hero-ceramics.jpg"
+      ],
+      "hero_image_url": "/images/product-aurora-vase.jpg",
+      "id": "774c2ad4-9de2-4faf-b0da-8e50cb180a6b",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Aurora Tall Vase",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-VES-001",
+      "slug": "aurora-tall-vase",
+      "sort_order": 1,
+      "specifications": {
+        "Care": "Wipe clean; not dishwasher safe",
+        "Diameter": "12 cm",
+        "Finish": "Matte",
+        "Height": "42 cm",
+        "Material": "Porcelain"
+      },
+      "story": "Aurora began as a study of morning light on limewashed walls in Jaipur \u2014 the way form dissolves into shadow.",
+      "tagline": "A quiet exhale in matte porcelain",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "base_price": 3600,
+      "collection_id": "98aa36dd-d31b-49e8-9280-7a81a4c4d801",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "currency": "INR",
+      "cutout_image_url": null,
+      "description": "A wide, shallow serving bowl in warm oatmeal stoneware with a subtle reactive glaze pooling at the center.",
+      "gallery": [
+        "/images/product-halo-bowl.jpg",
+        "/images/collection-tableware.jpg"
+      ],
+      "hero_image_url": "/images/product-halo-bowl.jpg",
+      "id": "9b46aa69-d2fe-440f-a31a-30a3a8516fde",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Halo Serving Bowl",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-TAB-001",
+      "slug": "halo-serving-bowl",
+      "sort_order": 2,
+      "specifications": {
+        "Care": "Dishwasher safe",
+        "Diameter": "32 cm",
+        "Finish": "Reactive glaze",
+        "Height": "8 cm",
+        "Material": "Stoneware"
+      },
+      "story": "Halo is inspired by the copper thali \u2014 reimagined for the modern dining room.",
+      "tagline": "A generous form for shared meals",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "base_price": 24000,
+      "collection_id": "6e8adf99-fed5-4dc6-9ce2-e1e68a285bcd",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "currency": "INR",
+      "cutout_image_url": null,
+      "description": "A tall ridged terracotta planter with a hand-finished bronze rim. Statement-scale, indoor or covered outdoor.",
+      "gallery": [
+        "/images/product-terra-planter.jpg",
+        "/images/collection-planters.jpg"
+      ],
+      "hero_image_url": "/images/product-terra-planter.jpg",
+      "id": "5362cccf-6792-4c75-a055-e39eca1c82ac",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Terra Floor Planter",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-PLA-001",
+      "slug": "terra-floor-planter",
+      "sort_order": 3,
+      "specifications": {
+        "Care": "Sealed interior; wipe with damp cloth",
+        "Diameter": "38 cm",
+        "Height": "90 cm",
+        "Material": "Terracotta with bronze rim",
+        "Weight": "22 kg"
+      },
+      "story": "Terra references the ribbed water pots still made in Khurja \u2014 scaled for hotels, restaurants, and generous foyers.",
+      "tagline": "A sculptural anchor for interiors",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "base_price": 5400,
+      "collection_id": "98aa36dd-d31b-49e8-9280-7a81a4c4d801",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "currency": "INR",
+      "cutout_image_url": null,
+      "description": "A matte charcoal ceramic teapot with a hand-turned wooden handle and bronze spout accent. Designed to age beautifully.",
+      "gallery": [
+        "/images/product-ember-teapot.jpg"
+      ],
+      "hero_image_url": "/images/product-ember-teapot.jpg",
+      "id": "2a0f785a-6b36-4e95-8963-0f5ae7fde2b3",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Ember Teapot",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-TAB-002",
+      "slug": "ember-teapot",
+      "sort_order": 4,
+      "specifications": {
+        "Capacity": "900 ml",
+        "Care": "Hand wash only",
+        "Height": "16 cm",
+        "Material": "Stoneware, teak, bronze"
+      },
+      "story": "Ember is a nod to slow mornings \u2014 chai measured, not rushed.",
+      "tagline": "An heirloom, warmed daily",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "base_price": 4200,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-13T17:51:16.068667+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/4c54b663-4525-4d1b-a18b-781ea172277e-luna-face-vase-real-main.png",
+      "description": "A contemporary sculptural ceramic vase crafted for modern interiors. Featuring clean architectural lines and a soft matte finish, the Luna Face Vase blends effortlessly into Scandinavian, Japandi, Minimalist, and Luxury home d\u00e9cor.",
+      "gallery": [
+        {
+          "alt": "Luna Face Ceramic Vase \u2014 hero",
+          "caption": "Blue & ivory edition",
+          "url": "/migrated-assets/de2bf9c9-d907-46b6-9ebf-d4077384b22a-luna-face-vase-hero.png"
+        },
+        {
+          "alt": "Luna Face Vase \u2014 studio photo, front",
+          "caption": "Studio photograph",
+          "url": "/migrated-assets/741e0cbc-0272-418a-98dd-7e9f31d0b770-luna-face-vase-real-1.jpg"
+        },
+        {
+          "alt": "Luna Face Vase \u2014 studio photo, profile",
+          "caption": "Profile view",
+          "url": "/migrated-assets/570038d0-3258-4a44-b816-21b24a2a7cf7-luna-face-vase-real-2.jpg"
+        },
+        {
+          "alt": "Close-up of the sculpted face and cobalt speckle",
+          "caption": "Glaze detail",
+          "url": "/migrated-assets/347eb678-7fac-4317-89a4-64c846bf4e15-luna-face-vase-closeup.png"
+        },
+        {
+          "alt": "Luna Face Vase styled on a console with pampas grass",
+          "caption": "Styled with pampas",
+          "url": "/migrated-assets/e46337e9-2b1c-4ddf-8d5c-5f1f6067edc5-luna-face-vase-lifestyle.png"
+        },
+        {
+          "alt": "Five styling ideas: console, coffee table, shelf, entryway, bedroom",
+          "caption": "Styling ideas",
+          "url": "/migrated-assets/25ac16b0-e554-4d0e-85b6-44f3121a5618-luna-face-vase-styling-grid.png"
+        },
+        {
+          "alt": "Luna Face Vase across five interior scenes",
+          "caption": "In interiors",
+          "url": "/migrated-assets/a3345bf1-16b9-42b1-b840-68c2c4e165a2-luna-face-vase-interiors-grid.png"
+        },
+        {
+          "alt": "Features overview: premium ceramic, matte finish, sculptural design",
+          "caption": "Features",
+          "url": "/migrated-assets/060dd1bf-10d9-45f6-af38-b2d46c9262ba-luna-face-vase-features.png"
+        },
+        {
+          "alt": "Dimensions diagram: height 26 cm, opening 7.5 cm, widest 12 cm",
+          "caption": "Dimensions",
+          "url": "/migrated-assets/29c33495-799c-4671-9f16-e8de7833d143-luna-face-vase-specs.png"
+        }
+      ],
+      "hero_image_url": "/migrated-assets/de2bf9c9-d907-46b6-9ebf-d4077384b22a-luna-face-vase-hero.png",
+      "id": "15622c9a-eeb3-46c2-890b-f525f5bcc544",
+      "is_featured": false,
+      "is_published": true,
+      "name": "Luna Face Ceramic Vase",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-009",
+      "slug": "luna-face-ceramic-vase",
+      "sort_order": 0,
+      "specifications": {
+        "Care": "Wipe with a soft, dry cloth. Hand-wash only.",
+        "Finish": "Soft matte, hand-glazed",
+        "Height": "26 cm",
+        "Material": "High-fired ceramic",
+        "Opening": "7.5 cm",
+        "Palette": "Ivory with cobalt speckle",
+        "Widest point": "12 cm"
+      },
+      "story": "A quiet face rendered in ivory glaze, edged with a hand-splashed cobalt drift \u2014 the Luna Face Vase is a study in contrast between still form and unruly pigment. Each piece is finished by hand, so the blue speckle falls a little differently every time.",
+      "tagline": "Blue & Ivory Edition",
+      "updated_at": "2026-07-14T12:12:05.104053+00:00"
+    },
+    {
+      "base_price": 3400,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-13T18:44:15.840577+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/0b582259-3377-43e5-aac7-39e209cea277-coral-reef-vase-real-main.png",
+      "description": "Inspired by coastal landscapes and contemporary sculpture, the Coral Reef Sculpt Vase features a striking circular silhouette finished with a handcrafted turquoise and coral speckled glaze. Its sculptural form creates visual balance whether displayed with dried botanicals or as a standalone art piece. Perfect for Scandinavian, Japandi, Mediterranean, Boho, and Modern interiors.",
+      "gallery": [
+        {
+          "alt": "Coral Reef Sculpt Vase hero",
+          "caption": "Sculptural donut silhouette",
+          "url": "/migrated-assets/796e1c33-edf5-4033-b166-a40779ffb22a-coral-reef-vase-hero.png"
+        },
+        {
+          "alt": "Real product front",
+          "caption": "Handcrafted piece",
+          "url": "/migrated-assets/a1493e0c-fed2-43e5-86f5-b39451d307da-coral-reef-vase-real-1.jpg"
+        },
+        {
+          "alt": "Real product view",
+          "caption": "Speckled glaze detail",
+          "url": "/migrated-assets/6db0b9b4-4252-4566-84a1-979389a628f7-coral-reef-vase-real-2.jpg"
+        },
+        {
+          "alt": "Lifestyle with pampas grass",
+          "caption": "Styled with dried botanicals",
+          "url": "/migrated-assets/5fc631fc-e041-45b8-ac5d-25192998fe04-coral-reef-vase-lifestyle.png"
+        },
+        {
+          "alt": "Interior styling grid",
+          "caption": "Bedroom, villa & minimal luxury",
+          "url": "/migrated-assets/446e5fe3-3f5b-404e-97bf-757436dde4d9-coral-reef-vase-styling-grid.png"
+        },
+        {
+          "alt": "Cozy minimalist interiors",
+          "caption": "Living, dining & coastal spaces",
+          "url": "/migrated-assets/b19e4f87-a7b7-4bcf-a857-bf4752268c6a-coral-reef-vase-interiors-grid.png"
+        },
+        {
+          "alt": "Dimensions and features",
+          "caption": "Height 14.5cm \u00b7 Opening 3cm \u00b7 Widest 14cm",
+          "url": "/migrated-assets/49454447-7ab0-499a-9041-940466041b83-coral-reef-vase-specs.png"
+        }
+      ],
+      "hero_image_url": "/migrated-assets/796e1c33-edf5-4033-b166-a40779ffb22a-coral-reef-vase-hero.png",
+      "id": "bbc731de-b81f-4454-8088-46327222469e",
+      "is_featured": false,
+      "is_published": true,
+      "name": "Coral Reef Sculpt Vase",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-PRY-002",
+      "slug": "coral-reef-sculpt-vase",
+      "sort_order": 0,
+      "specifications": {
+        "Care": "Wipe with a soft, dry cloth",
+        "Colour": "Turquoise & coral on ivory",
+        "Design": "Donut sculptural silhouette",
+        "Finish": "Handcrafted speckled glaze",
+        "Height": "14.5 cm",
+        "Ideal for": "Dried flowers, pampas grass, standalone accent",
+        "Material": "High-fired ceramic",
+        "Opening": "3 cm",
+        "Widest": "14 cm"
+      },
+      "story": "\u2022 Premium handcrafted ceramic\n\u2022 Unique donut sculptural design\n\u2022 Artistic turquoise & coral speckled glaze\n\u2022 Perfect for dried flowers & pampas grass\n\u2022 Luxury modern home d\u00e9cor",
+      "tagline": "Modern Ceramic Donut Vase \u2014 Turquoise & Coral",
+      "updated_at": "2026-07-14T12:16:20.104876+00:00"
+    },
+    {
+      "base_price": 3800,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-13T18:25:49.941317+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/9e02efee-f78a-43cf-b703-17d5a3779347-azure-tide-jug-real-main.png",
+      "description": "Inspired by Mediterranean pottery and modern Scandinavian interiors, the Azure Tide Ceramic Jug Vase combines sculptural elegance with handcrafted artistry. Its organic silhouette, integrated handle, and textured blue glaze evoke the beauty of ocean waves \u2014 a timeless decorative accent for luxury homes. Suitable for dried flowers, pampas grass, faux botanicals, or as a standalone decorative sculpture.",
+      "gallery": [
+        {
+          "alt": "Azure Tide ceramic jug vase \u2014 studio",
+          "caption": "Clean studio listing",
+          "url": "/migrated-assets/218dce94-0e73-43fc-be36-eb34303df4cb-azure-tide-jug-hero.png"
+        },
+        {
+          "alt": "Real product photograph",
+          "caption": "Actual piece",
+          "url": "/migrated-assets/ca8a1abe-9b30-4867-b235-3dda444dbfd3-azure-tide-jug-real.jpg"
+        },
+        {
+          "alt": "Styled with pampas grass",
+          "caption": "Lifestyle",
+          "url": "/migrated-assets/1556b0f4-81f1-44da-a0ee-c720f22e7357-azure-tide-jug-lifestyle.png"
+        },
+        {
+          "alt": "Coastal interior scenes",
+          "caption": "In coastal homes",
+          "url": "/migrated-assets/6a5880df-4edd-431c-9831-044e15cd0f7c-azure-tide-jug-interiors-grid.png"
+        },
+        {
+          "alt": "Styling ideas grid",
+          "caption": "10 ways to style",
+          "url": "/migrated-assets/c17c63bc-8029-4a21-95c7-bc5d5f3e8518-azure-tide-jug-collection.png"
+        },
+        {
+          "alt": "Product features",
+          "caption": "Features",
+          "url": "/migrated-assets/56cb886e-ba07-4958-a03c-d0ad140bd267-azure-tide-jug-features.png"
+        },
+        {
+          "alt": "Dimensions diagram",
+          "caption": "Dimensions",
+          "url": "/migrated-assets/11752d07-607a-4492-b864-e5d2db1b0190-azure-tide-jug-dimensions.png"
+        },
+        {
+          "alt": "Specifications",
+          "caption": "Specifications",
+          "url": "/migrated-assets/96702225-9cd3-4578-9105-659dc5d7a15f-azure-tide-jug-specs.png"
+        }
+      ],
+      "hero_image_url": "/migrated-assets/218dce94-0e73-43fc-be36-eb34303df4cb-azure-tide-jug-hero.png",
+      "id": "45f3922b-59fe-472f-8f17-cd1c4ac2b9ef",
+      "is_featured": false,
+      "is_published": true,
+      "name": "Azure Tide Ceramic Jug Vase",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-PRY-006",
+      "slug": "azure-tide-ceramic-jug-vase",
+      "sort_order": 0,
+      "specifications": {
+        "Color": "Coastal Blue & Ivory",
+        "Finish": "Textured Glaze",
+        "Height": "18.3 cm",
+        "Ideal for": "Dried flowers, pampas grass, faux botanicals, or as a standalone decor piece",
+        "Material": "Premium Ceramic",
+        "Opening": "5 cm",
+        "Widest": "6.5 cm"
+      },
+      "story": "Premium handmade ceramic construction \u00b7 Elegant coastal blue textured glaze \u00b7 Jug-inspired sculptural design \u00b7 Perfect for pampas grass, dried flowers and faux stems \u00b7 A beautiful accent for the living room, dining table or entryway.",
+      "tagline": "Coastal Blue & Ivory \u2014 Mediterranean silhouette, Scandinavian calm",
+      "updated_at": "2026-07-14T12:14:15.711487+00:00"
+    },
+    {
+      "base_price": 3800,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-13T17:28:30.130699+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/cb2be72f-7ba5-42d4-8297-ff3c7b13f3f5-aura-sculpt-vase-real-main.png",
+      "description": "A contemporary sculptural ceramic vase crafted for modern interiors. Featuring clean architectural lines and a soft matte finish, the Aura Sculpt Vase blends effortlessly into Scandinavian, Japandi, Minimalist, and Luxury home d\u00e9cor. Perfect for pampas grass, dried florals, or standing alone as a quiet sculptural statement on a console, coffee table, or shelf.",
+      "gallery": [
+        {
+          "alt": "Aura Sculpt Vase \u2014 product shot",
+          "caption": "Product",
+          "url": "/migrated-assets/45e02d5c-4d19-46f8-ab68-fc1d1453821d-aura-sculpt-vase-hero.png"
+        },
+        {
+          "alt": "Aura Sculpt Vase styled with pampas grass on an oak console",
+          "caption": "Editorial",
+          "url": "/migrated-assets/48a26df4-cb4a-4375-a735-498d266b1d45-aura-sculpt-vase-editorial.png"
+        },
+        {
+          "alt": "Lifestyle photo of the vase being arranged in a serene living room",
+          "caption": "Lifestyle",
+          "url": "/migrated-assets/b0847542-6b88-45c7-b203-7e1426d7f7ac-aura-sculpt-vase-lifestyle.png"
+        },
+        {
+          "alt": "Luxury hotel styling with brass and marble",
+          "caption": "Luxury hotel styling",
+          "url": "/migrated-assets/1688c0d2-8a59-489c-a63c-aa8025222354-aura-sculpt-vase-hotel.png"
+        },
+        {
+          "alt": "Luxury marble bathroom vignette with the vase and olive branches",
+          "caption": "Luxury bathroom",
+          "url": "/migrated-assets/d073b583-220a-4f0a-b77f-543fbaeecf8f-aura-sculpt-vase-bathroom.png"
+        },
+        {
+          "alt": "Pinterest-style flat lay with linen, eucalyptus and Kinfolk magazine",
+          "caption": "Flat lay",
+          "url": "/migrated-assets/e1a4ba98-13cf-4a69-b189-661da01a6b30-aura-sculpt-vase-flatlay.png"
+        },
+        {
+          "alt": "Detail of the rim and speckled matte finish",
+          "caption": "Detail",
+          "url": "/migrated-assets/72e95b36-2b7f-41b7-94c8-dbae23e13a9a-aura-sculpt-vase-detail.png"
+        },
+        {
+          "alt": "Close-up of the sculpted face-inspired relief",
+          "caption": "Close-up",
+          "url": "/migrated-assets/9c28f1c8-e753-4270-849e-d70f755acd44-aura-sculpt-vase-closeup.png"
+        },
+        {
+          "alt": "Dimensions diagram: 7.3 in tall, 10.2 cm widest, 4.4 cm opening",
+          "caption": "Dimensions",
+          "url": "/migrated-assets/59b20a52-435c-4f0a-9a69-f94f59569bc4-aura-sculpt-vase-specs.png"
+        },
+        {
+          "alt": "Feature summary: premium ceramic, matte luxury finish, modern sculptural design",
+          "caption": "Features",
+          "url": "/migrated-assets/69a5f066-abd6-45f5-995a-965a68cafe8c-aura-sculpt-vase-features.png"
+        },
+        {
+          "alt": "Aura Sculpt Vase \u2014 actual product photograph on black background",
+          "caption": "Actual product",
+          "url": "/migrated-assets/6fcf5d8b-8b16-401f-ae87-f66bd62b8991-aura-sculpt-vase-real.jpg"
+        },
+        {
+          "alt": "Aura Sculpt Vase styled on an oak console with pampas grass in Scandinavian sunlight",
+          "caption": "Scandinavian still life",
+          "url": "/migrated-assets/1377d3be-3186-44cf-aeaf-ad44a19f64be-aura-sculpt-vase-scandi.png"
+        },
+        {
+          "alt": "Styling grid: luxury hotel, flat lay, close-up detail, lifestyle, and bathroom scenes",
+          "caption": "Styling ideas",
+          "url": "/migrated-assets/dcc48e5b-183b-44ec-87fa-6e651a56f34e-aura-sculpt-vase-styling-grid.png"
+        },
+        {
+          "alt": "Interior scenes featuring the Aura Sculpt Vase across living, dining and console vignettes",
+          "caption": "In minimalist interiors",
+          "url": "/migrated-assets/3a2f1c7c-5ba8-4fc7-b224-c2e9a601bdc3-aura-sculpt-vase-interiors-grid.png"
+        }
+      ],
+      "hero_image_url": "/migrated-assets/45e02d5c-4d19-46f8-ab68-fc1d1453821d-aura-sculpt-vase-hero.png",
+      "id": "910c3768-71c4-4c77-8006-2eb59a08b4a8",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Aura Sculpt Vase",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-008",
+      "slug": "aura-sculpt-vase",
+      "sort_order": 10,
+      "specifications": {
+        "care": "Wipe clean with a soft dry cloth. Suitable for dried florals; use a plastic liner for fresh water arrangements.",
+        "features": [
+          "Premium ceramic construction",
+          "Matte luxury finish with soft-touch texture",
+          "Modern sculptural, face-inspired design",
+          "Perfect for pampas grass and dried flowers",
+          "Ideal for living room, console, coffee table or office"
+        ],
+        "finish": "Soft matte, speckled white glaze",
+        "height": "7.3 in (18.5 cm)",
+        "material": "Premium stoneware ceramic",
+        "opening": "4.4 cm",
+        "style": [
+          "Scandinavian",
+          "Japandi",
+          "Minimalist",
+          "Luxury"
+        ],
+        "weight": "Approx. 900 g",
+        "widest": "10.2 cm"
+      },
+      "story": "Sourced from a small-batch ceramic studio working in the Japandi tradition, the Aura Sculpt Vase is finished by hand \u2014 the soft speckled matte glaze is fired to a low sheen so the sculpted face-inspired form takes centre stage. Every piece carries subtle variation in tone and texture, the mark of genuine studio ceramics rather than mass production.",
+      "tagline": "Contemporary sculptural ceramic vase with a soft matte finish",
+      "updated_at": "2026-07-14T12:25:55.682336+00:00"
+    },
+    {
+      "base_price": 4200,
+      "collection_id": "c2304398-789e-43e6-966b-1d8260917420",
+      "created_at": "2026-07-13T16:28:39.933058+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/ac5de287-143e-4e72-85ba-ebe5a853f026-aurora-vase-large-real-main.png",
+      "description": "A tall, ribbed statement vase finished in a hand-applied speckled glaze \u2014 deep cobalt scattered with terracotta flecks over a warm bone ground. The flared lip and stacked rings catch the light differently through the day, giving it the quiet presence of a piece meant to be lived with, not just looked at.",
+      "gallery": [
+        "/migrated-assets/ed05aadc-4ed0-4d05-ab84-8e0c97238cb8-aurora-vase-large-hero.png",
+        "/migrated-assets/d08e9438-4daa-459a-bfc7-2172c407deae-aurora-vase-large-editorial.png",
+        "/migrated-assets/2abbff32-c117-438c-8a8e-7600ae4a002f-aurora-vase-large-lifestyle-1.png",
+        "/migrated-assets/c848cbc9-5e2f-4476-ab9c-32c41a5e0dda-aurora-vase-large-scenes.png",
+        "/__l5e/assets-v1/ba8de67c-c88a-4fb5-afef-f8681c628e9f/aurora-vase-large-cutout.png",
+        "/migrated-assets/b910d175-8b98-47b5-8c6a-dce149b9d9d6-aurora-vase-large-specs.png"
+      ],
+      "hero_image_url": "/migrated-assets/ed05aadc-4ed0-4d05-ab84-8e0c97238cb8-aurora-vase-large-hero.png",
+      "id": "61fe156c-f360-41f2-ab52-91d815415185",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Aurora Vase Large",
+      "scenes": [],
+      "series_id": null,
+      "sku": "PRY-001",
+      "slug": "aurora-vase-large",
+      "sort_order": 1,
+      "specifications": {
+        "Care": "Wipe clean with a soft dry cloth",
+        "Finish": "Hand-applied speckled glaze",
+        "Height": "11.5 in (29 cm)",
+        "Material": "Stoneware ceramic",
+        "Opening": "3 in (7.6 cm)",
+        "Origin": "Handcrafted in India",
+        "Palette": "Cobalt, terracotta, bone",
+        "Widest diameter": "4.6 in (11.7 cm)"
+      },
+      "story": "Sourced from a small studio working in the blue-and-white speckleware tradition. Each vessel is thrown, ribbed and hand-glazed, so no two share the same distribution of colour \u2014 small variations in the speckle and glaze pooling are part of the mark of the maker.",
+      "tagline": "Speckled cobalt & terracotta, ribbed silhouette",
+      "updated_at": "2026-07-14T12:37:03.410277+00:00"
+    },
+    {
+      "base_price": 2800,
+      "collection_id": "98aa36dd-d31b-49e8-9280-7a81a4c4d801",
+      "created_at": "2026-07-14T13:13:24.328385+00:00",
+      "currency": "INR",
+      "cutout_image_url": "/migrated-assets/fbc6bda2-901d-481f-90d1-c0d021d689c8-terra-bloom-canister-real-main.png",
+      "description": "A premium decorative ceramic canister, hand-glazed with a warm terracotta speckle. Fitted lid with a soft loop handle keeps coffee beans, tea, sugar, cookies, dry fruits or bathroom essentials beautifully stored \u2014 and looking equally beautiful on open shelves and countertops.",
+      "gallery": [
+        {
+          "url": "/migrated-assets/297efa9b-09ba-4487-8197-9488d3c39be9-terra-bloom-canister-main.png"
+        },
+        {
+          "url": "/migrated-assets/5ef05cea-0262-4860-800d-5d0c371078d6-terra-bloom-canister-lifestyle.png"
+        },
+        {
+          "url": "/migrated-assets/8b764f75-0af2-4e05-8509-6dc772be3966-terra-bloom-canister-front.jpg"
+        },
+        {
+          "url": "/migrated-assets/c60b3a0c-9e13-4d40-a4fd-dae2cde8391c-terra-bloom-canister-open.jpg"
+        },
+        {
+          "url": "/migrated-assets/4884a743-ee73-4fc0-af18-c1b969027111-terra-bloom-canister-side.jpg"
+        },
+        {
+          "url": "/migrated-assets/a58521ad-20c8-48f0-8563-da7967cb6f31-terra-bloom-canister-detail.jpg"
+        },
+        {
+          "url": "/migrated-assets/ec193476-16ca-4df4-9be6-ee763b3f69da-terra-bloom-canister-specs.png"
+        }
+      ],
+      "hero_image_url": "/migrated-assets/5ef05cea-0262-4860-800d-5d0c371078d6-terra-bloom-canister-lifestyle.png",
+      "id": "0e9cfc24-0a91-4823-8e2f-b6a72b3c5664",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Terra Bloom Canister",
+      "scenes": [
+        {
+          "label": "Lifestyle",
+          "url": "/migrated-assets/5ef05cea-0262-4860-800d-5d0c371078d6-terra-bloom-canister-lifestyle.png"
+        },
+        {
+          "label": "Open",
+          "url": "/migrated-assets/c60b3a0c-9e13-4d40-a4fd-dae2cde8391c-terra-bloom-canister-open.jpg"
+        },
+        {
+          "label": "Detail",
+          "url": "/migrated-assets/a58521ad-20c8-48f0-8563-da7967cb6f31-terra-bloom-canister-detail.jpg"
+        },
+        {
+          "label": "Specs",
+          "url": "/migrated-assets/ec193476-16ca-4df4-9be6-ee763b3f69da-terra-bloom-canister-specs.png"
+        }
+      ],
+      "series_id": null,
+      "sku": "PRY-003",
+      "slug": "terra-bloom-canister",
+      "sort_order": 10,
+      "specifications": {
+        "Care": "Hand wash, avoid harsh abrasives",
+        "Finish": "Terracotta speckled glaze",
+        "Height": "16 cm",
+        "Ideal for": "Coffee, tea, sugar, cookies, dry fruits, snacks, cotton balls, bathroom accessories",
+        "Lid": "Fitted ceramic lid with loop handle",
+        "Material": "Handcrafted ceramic",
+        "Opening": "9 cm",
+        "Widest": "11.5 cm"
+      },
+      "story": "Thrown, glazed and finished by hand in small batches. Each Terra Bloom carries its own bloom of terracotta speckle \u2014 no two are ever identical.",
+      "tagline": "Handcrafted Ceramic Storage Jar with Lid",
+      "updated_at": "2026-07-14T13:28:00.923091+00:00"
+    }
+  ],
+  "collections": [
+    {
+      "cover_image_url": "/images/collection-vessels.jpg",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "description": "Hand-thrown ceramic vessels that turn a corner, a console, a mantel into an editorial still life.",
+      "id": "c2304398-789e-43e6-966b-1d8260917420",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Vessels",
+      "slug": "vessels",
+      "sort_order": 1,
+      "tagline": "Sculptural forms for still moments",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "cover_image_url": "/images/collection-tableware.jpg",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "description": "Reactive-glaze serveware crafted for the way food is set, shared and photographed today.",
+      "id": "98aa36dd-d31b-49e8-9280-7a81a4c4d801",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Tableware",
+      "slug": "tableware",
+      "sort_order": 2,
+      "tagline": "Everyday rituals, elevated",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    },
+    {
+      "cover_image_url": "/images/collection-planters.jpg",
+      "created_at": "2026-07-12T15:11:09.423487+00:00",
+      "description": "Substantial terracotta and stoneware planters designed for hospitality and residential landscapes.",
+      "id": "6e8adf99-fed5-4dc6-9ce2-e1e68a285bcd",
+      "is_featured": true,
+      "is_published": true,
+      "name": "Planters",
+      "slug": "planters",
+      "sort_order": 3,
+      "tagline": "Architectural companions",
+      "updated_at": "2026-07-12T15:11:09.423487+00:00"
+    }
+  ]
+}
