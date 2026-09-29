@@ -1,6 +1,7 @@
 import 'react-native-url-polyfill/auto';
 import React,{useEffect,useMemo,useState} from 'react';
-import {Alert,ActivityIndicator,Image,Modal,Pressable,SafeAreaView,ScrollView,StatusBar,StyleSheet,Text,TextInput,View} from 'react-native';
+import {Alert,ActivityIndicator,Image,Modal,Pressable,ScrollView,StatusBar,StyleSheet,Text,TextInput,View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {createClient} from '@supabase/supabase-js';
 import * as ImagePicker from 'expo-image-picker';
