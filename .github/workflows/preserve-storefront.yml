@@ -1,0 +1,37 @@
+name: Preserve and verify Prayog storefront
+on:
+  push:
+    branches: [migration/prayog-storefront]
+    paths: [storefront/**, .github/workflows/preserve-storefront.yml]
+permissions:
+  contents: write
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: storefront/package-lock.json
+      - name: Preserve original image binaries
+        run: python storefront/scripts/preserve-images.py
+      - run: npm ci --ignore-scripts
+        working-directory: storefront
+      - run: npm run typecheck
+        working-directory: storefront
+      - run: npm run build
+        working-directory: storefront
+        env:
+          VITE_SUPABASE_URL: https://wgyuptsujquqwrnufawf.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: build-validation-placeholder
+      - name: Commit preserved images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add storefront/public storefront/src/assets
+          if ! git diff --cached --quiet; then
+            git commit -m "Preserve original Prayog storefront images"
+            git push
+          fi

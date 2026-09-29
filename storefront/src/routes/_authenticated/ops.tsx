@@ -1,0 +1,2 @@
+import { createFileRoute } from '@tanstack/react-router';
+export const Route = createFileRoute('/_authenticated/ops')({ component: () => <div className="container-editorial py-20"><h1 className="h-display text-4xl">Prayog Manager</h1><p className="mt-4">Manage products, publishing, orders, stock and your team in one workspace.</p><a className="link-underline mt-6 inline-block" href={import.meta.env.VITE_MANAGER_URL || 'https://prayog-decor-manager.vercel.app/'}>Open Manager</a></div> });
