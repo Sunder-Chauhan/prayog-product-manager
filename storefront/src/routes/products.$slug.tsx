@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-rout
 import { queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
+import { formatMeasurement, type LengthUnit } from "@/lib/measurement-units";
 import { useCart } from "@/lib/cart-store";
 import { toast } from "sonner";
 import { ArrowRight, Heart, Minus, Plus } from "lucide-react";
@@ -65,6 +66,7 @@ export const Route = createFileRoute("/products/$slug")({
 function ProductDetail() {
   const { slug } = Route.useParams();
   const [qty, setQty] = useState(1);
+  const [lengthUnit, setLengthUnit] = useState<LengthUnit>("cm");
   const [activeImg, setActiveImg] = useState(0);
   const add = useCart((s) => s.add);
   const { user } = useAuth();
@@ -94,7 +96,8 @@ function ProductDetail() {
         .filter(Boolean)
     : [];
   if (gallery.length === 0 && product.hero_image_url) gallery.push(product.hero_image_url);
-  const specs = (product.specifications ?? {}) as Record<string, string>;
+  const originalSpecs = (product.specifications ?? {}) as Record<string, string>;
+  const specs = Object.fromEntries(Object.entries(originalSpecs).map(([key, value]) => [key, formatMeasurement(value, lengthUnit)]));
 
   const toggleWishlist = async () => {
     if (!user) {
@@ -233,8 +236,19 @@ function ProductDetail() {
 
           {Object.keys(specs).length > 0 && (
             <div className="mt-10 border-t border-border pt-8">
-              <div className="eyebrow">Specifications</div>
-              <dl className="mt-4 divide-y divide-border">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="eyebrow">Specifications</div>
+                <div role="group" aria-label="Measurement units" className="inline-flex rounded-full border border-border p-1">
+                  {(["cm", "in"] as const).map((unit) => (
+                    <button key={unit} type="button" aria-pressed={lengthUnit === unit}
+                      onClick={() => setLengthUnit(unit)}
+                      className={`rounded-full px-4 py-2 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${lengthUnit === unit ? "bg-primary text-primary-foreground" : "hover:bg-secondary"}`}>
+                      {unit === "cm" ? "cm" : "inches"}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <dl aria-live="polite" className="mt-4 divide-y divide-border">
                 {Object.entries(specs).map(([k, v]) => (
                   <div key={k} className="py-3 flex justify-between gap-6 text-sm">
                     <dt className="text-muted-foreground">{k}</dt>
