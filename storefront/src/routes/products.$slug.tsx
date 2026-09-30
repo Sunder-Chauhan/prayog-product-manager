@@ -90,8 +90,13 @@ function ProductDetail() {
   });
 
 
+  const videos = Array.isArray(product.gallery)
+    ? (product.gallery as Array<string | { url?: string; type?: string; caption?: string }>)
+        .filter((g): g is { url: string; type: string; caption?: string } => typeof g !== "string" && g?.type === "video" && !!g.url)
+    : [];
   const gallery: string[] = Array.isArray(product.gallery)
     ? (product.gallery as Array<string | { url?: string }>)
+        .filter((g) => typeof g === "string" || (g as { type?: string })?.type !== "video")
         .map((g) => (typeof g === "string" ? g : g?.url ?? ""))
         .filter(Boolean)
     : [];
@@ -167,6 +172,24 @@ function ProductDetail() {
                 </div>
               )}
             </>
+          )}
+          {videos.length > 0 && (
+            <div className="mt-8 border-t border-border pt-6">
+              <h2 className="eyebrow">Product videos</h2>
+              <div className="mt-4 grid gap-6">
+                {videos.map((video) => (
+                  <figure key={video.url}>
+                    <video controls playsInline preload="none"
+                      aria-label={video.caption ?? product.name}
+                      className="w-full max-h-[520px] rounded-lg bg-secondary">
+                      <source src={video.url} type="video/mp4" />
+                      Your browser does not support video playback.
+                    </video>
+                    {video.caption && <figcaption className="mt-2 text-sm text-muted-foreground">{video.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            </div>
           )}
         </div>
 
