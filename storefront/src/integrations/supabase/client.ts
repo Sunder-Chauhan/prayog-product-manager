@@ -8,7 +8,27 @@ export async function getCatalog() {
   const { data, error } = await sharedRpc('storefront_catalog');
   if (error) throw error;
   const products = data.products ?? [];
-  const collections = [...new Map(products.filter((p: any) => p.collections).map((p: any) => [p.collection_id, { ...p.collections, id: p.collection_id, is_published: true }])).values()];
+  // Collection covers come from published catalog products, never demo imagery.
+  const collectionMap = new Map<string, any>();
+  const orderedProducts = [...products].sort((a: any, b: any) =>
+    Number(a.sort_order ?? 0) - Number(b.sort_order ?? 0) ||
+    String(a.sku ?? '').localeCompare(String(b.sku ?? '')));
+  for (const product of orderedProducts) {
+    if (!product.collections || !product.collection_id) continue;
+    const cover = product.hero_image_url || product.cutout_image_url;
+    const existing = collectionMap.get(product.collection_id);
+    if (!existing) {
+      collectionMap.set(product.collection_id, {
+        ...product.collections,
+        id: product.collection_id,
+        is_published: true,
+        cover_image_url: cover || null,
+      });
+    } else if (!existing.cover_image_url && cover) {
+      existing.cover_image_url = cover;
+    }
+  }
+  const collections = [...collectionMap.values()];
   return { products, collections };
 }
 class ReadQuery {

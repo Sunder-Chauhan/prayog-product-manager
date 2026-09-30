@@ -89,7 +89,7 @@ function Home() {
           <div>
             <div className="eyebrow">Curated collections</div>
             <h2 className="h-display text-4xl md:text-5xl mt-3 max-w-xl">
-              Three families of objects, one considered eye.
+              Explore the Prayog collection.
             </h2>
           </div>
           <Link to="/collections" className="hidden md:inline-flex link-underline text-sm items-center gap-2">

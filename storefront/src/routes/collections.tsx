@@ -34,7 +34,7 @@ function CollectionsIndex() {
     <div className="container-editorial py-20 md:py-28">
       <div className="max-w-2xl">
         <div className="eyebrow">Curated collections</div>
-        <h1 className="h-display text-5xl md:text-6xl mt-4">Three curated families of objects.</h1>
+        <h1 className="h-display text-5xl md:text-6xl mt-4">Explore our collections.</h1>
         <p className="mt-5 text-muted-foreground text-lg">
           Each collection is selected from independent workshops across India —
           chosen for how a piece will be used, held, or looked at every day.
