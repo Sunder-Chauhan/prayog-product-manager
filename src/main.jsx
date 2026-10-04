@@ -1,3 +1,5 @@
+import AssemblyGuideEditor from './AssemblyGuideEditor.jsx';
+import {GUIDE_KEY,readGuide,youtubeId} from '../shared/assembly-guide.js';
 import React, {useEffect, useMemo, useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {createClient} from '@supabase/supabase-js';
@@ -153,8 +155,18 @@ function StorefrontForm({item,products,busy,error,submit}){
  }
  function move(i,step){const list=[...media];[list[i],list[i+step]]=[list[i+step],list[i]];update('gallery',list)}
  function remove(i){const list=media.filter((_,n)=>n!==i);setDraft(d=>({...d,gallery:list,hero_image_url:media[i].url===d.hero_image_url?(list.find(x=>x.type!=='video')?.url||''):d.hero_image_url}))}
+ async function uploadGuidePhoto(file){
+  setUploading(true);setMediaError('');
+  try {
+   if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>20*1024*1024)throw new Error('Use JPG, PNG or WebP under 20 MB.');
+   const path=item.owner_id+'/'+item.sku+'/assembly/'+crypto.randomUUID()+'-'+file.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+   unwrap(await db.storage.from('storefront-media').upload(path,file,{contentType:file.type}));
+   return db.storage.from('storefront-media').getPublicUrl(path).data.publicUrl;
+  }catch(e){setMediaError(e.message);return null}finally{setUploading(false)}
+ }
  function save(publish){
   if(lock)return;
+  if(readGuide(draft.specifications?.[GUIDE_KEY]).steps.some(s=>s.youtube&&!youtubeId(s.youtube))){setMediaError('Enter a valid HTTPS YouTube video link for each assembly video.');return}
   if(publish&&!draft.hero_image_url){setMediaError('Choose a cover photo before publishing.');return}
   if(publish&&(!item.name||item.name.includes('(add product name)'))){setMediaError('Edit the product and enter its real name before publishing.');return}
   setMediaError('');submit({...draft,gallery:media,slug:draft.slug||item.sku.toLowerCase()},publish);
@@ -170,6 +182,7 @@ function StorefrontForm({item,products,busy,error,submit}){
  <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>{m.type!=='video'&&<button type="button" className="secondary" disabled={lock} onClick={()=>update('hero_image_url',m.url)}>Set cover</button>}<button type="button" className="secondary" aria-label={'Move media '+(i+1)+' earlier'} disabled={lock||i===0} onClick={()=>move(i,-1)}>↑</button><button type="button" className="secondary" aria-label={'Move media '+(i+1)+' later'} disabled={lock||i===media.length-1} onClick={()=>move(i,1)}>↓</button><button type="button" className="secondary" disabled={lock} onClick={()=>remove(i)}>Remove</button></div></div>)}
  {!media.length&&<p>No gallery media yet. Upload your product photos and videos here.</p>}</div>
 
+ <AssemblyGuideEditor draft={draft} update={update} disabled={lock} uploadPhoto={uploadGuidePhoto}/>
  <label className="checkbox"><input disabled={lock} type="checkbox" checked={!!draft.is_featured} onChange={e=>update('is_featured',e.target.checked)}/>Feature on homepage</label>
  <details className="listing-advanced"><summary>Advanced settings (optional)</summary><Field label="Product page address" hint="Set automatically from the SKU for new listings. Keep existing addresses to preserve shared links."><input disabled={lock} value={draft.slug||item.sku.toLowerCase()} pattern="[a-z0-9]+(?:-[a-z0-9]+)*" required onChange={e=>update('slug',e.target.value)}/></Field><Field label="Cover image link" hint="Filled automatically when you upload and choose a cover."><input disabled={lock} value={draft.hero_image_url||''} onChange={e=>update('hero_image_url',e.target.value)}/></Field><Field label="Studio cutout link" hint="Optional, only for the interactive studio viewer."><input disabled={lock} value={draft.cutout_image_url||''} onChange={e=>update('cutout_image_url',e.target.value)}/></Field></details>
  {error&&<div className="error" role="alert">{error}</div>}<div className="seller-actions"><button type="submit" className="secondary" disabled={lock}>Save draft</button><button type="button" className="primary" disabled={lock} onClick={e=>{if(e.currentTarget.form.reportValidity())save(true)}}>{lock?'Saving…':'Save & publish'}</button></div><p className="seller-help">Save draft keeps changes in Manager. Save & publish updates the customer store website and app.</p></form>
