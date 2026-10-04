@@ -8,6 +8,7 @@ import logoAsset from "@/assets/prayog-logo.png.asset.json";
 const NAV = [
   { to: "/collections", label: "Collections" },
   { to: "/products", label: "Products" },
+  { to: "/guide", label: "Guides" },
   { to: "/craftsmanship", label: "Craftsmanship" },
   { to: "/story", label: "Our Story" },
   { to: "/trade", label: "Trade" },
@@ -40,7 +41,7 @@ export function Header() {
           <span className="h-display text-2xl md:text-[1.6rem] tracking-tight">Prayog</span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-9 text-[0.82rem]">
+        <nav className="hidden lg:flex items-center gap-6 text-[0.82rem]">
           {NAV.map((n) => (
             <Link
               key={n.to}
