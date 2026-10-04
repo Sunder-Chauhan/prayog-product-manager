@@ -1,3 +1,4 @@
+import { AssemblyGuide, GUIDE_KEY } from "@/components/site/AssemblyGuide";
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
 import { queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -102,7 +103,7 @@ function ProductDetail() {
     : [];
   if (gallery.length === 0 && product.hero_image_url) gallery.push(product.hero_image_url);
   const originalSpecs = (product.specifications ?? {}) as Record<string, string>;
-  const specs = Object.fromEntries(Object.entries(originalSpecs).map(([key, value]) => [key, formatMeasurement(value, lengthUnit)]));
+  const specs = Object.fromEntries(Object.entries(originalSpecs).filter(([key]) => key !== GUIDE_KEY).map(([key, value]) => [key, formatMeasurement(value, lengthUnit)]));
 
   const toggleWishlist = async () => {
     if (!user) {
@@ -250,6 +251,7 @@ function ProductDetail() {
             Bulk or trade pricing <ArrowRight className="h-3.5 w-3.5" />
           </Link>
 
+          <AssemblyGuide value={originalSpecs[GUIDE_KEY]} />
           {product.story && (
             <div className="mt-12 border-t border-border pt-8">
               <div className="eyebrow">The story</div>
