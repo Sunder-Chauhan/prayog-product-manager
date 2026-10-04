@@ -16,3 +16,5 @@
 .seller-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
 .seller-actions button{flex:1;justify-content:center;min-width:150px}
 .seller-help{line-height:1.6}
+
+.assembly-editor>p{font-size:12px;color:#65736c;line-height:1.6;margin-bottom:18px}.assembly-step{min-width:0;border:1px solid #dfe7dc;border-radius:12px;padding:18px;margin:0 0 18px;background:#fafcf9}.assembly-step legend{font-size:12px;font-weight:800;color:#315345;padding:0 8px}.assembly-step .field{margin-bottom:16px}.assembly-step input[type=file]{white-space:normal;padding:10px;max-width:100%}.assembly-step input[type=file]::file-selector-button{border:0;border-radius:6px;background:#eaf1e9;color:#315345;padding:8px 10px;margin-right:10px}.assembly-step img{display:block;margin:0 0 12px;border:1px solid #dfe7dc;border-radius:8px;background:#fff}.assembly-actions{display:flex;flex-wrap:wrap;gap:8px;padding-top:16px;margin-top:16px;border-top:1px solid #e7eee5}.assembly-actions button{white-space:normal}.assembly-editor>button{max-width:100%;white-space:normal}@media(max-width:480px){.assembly-step{padding:14px}.assembly-actions button{flex:1 1 110px}}
