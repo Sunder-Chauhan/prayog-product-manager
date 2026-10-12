@@ -1,8 +1,8 @@
 /**
  * WhatsApp order & quote message builders.
- * All checkout paths route through +91 9990576324.
+ * All checkout paths route through +91 7827636992.
  */
-export const PRAYOG_WHATSAPP = "919990576324";
+export const PRAYOG_WHATSAPP = "917827636992";
 
 export interface WhatsAppItem {
   sku?: string | null;
